@@ -1,5 +1,516 @@
-*{
-  margin:0;
-  padding: 0;
-  box-sizing: border-box;
+:root {
+	--primary-font: "Berkshire Swash";
+	--secondary-font: "Comfortaa";
+	--primary-color: #8e2de2;
+	--gradient: linear-gradient(
+		45deg,
+		rgba(142, 45, 226, 1) 0%,
+		rgba(74, 0, 224, 1) 100%
+	);
+}
+@import url("https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Comfortaa:wght@300;400;500&display=swap");
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+	overflow-x: hidden;
+}
+header {
+	height: 100vh;
+	position: relative;
+	overflow: hidden;
+}
+svg {
+	position: absolute;
+	width: 100%;
+	right: -9%;
+	top: -17%;
+	z-index: -1;
+	overflow: hidden;
+}
+/* Navigation Bar */
+nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 80px;
+	padding: 0 20%;
+}
+
+nav img {
+	width: 80px;
+	height: auto;
+}
+
+ul {
+	display: flex;
+	list-style: none;
+}
+nav li {
+	margin: 30px;
+}
+nav a {
+	text-decoration: none;
+	font-family: var(--secondary-font);
+	font-size: 0.9rem;
+	color: white;
+}
+
+/* Hero Section */
+.hero-section {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex: 1;
+}
+.hero-section img {
+	width: 950px;
+}
+
+.hero-section h3 {
+	font-family: var(--secondary-font);
+	font-size: 20px;
+	color: var(--primary-color);
+}
+
+.hero-section h1 {
+	font-family: var(--primary-font);
+	font-size: 5rem;
+	color: var(--primary-color);
+}
+.profession {
+	display: flex;
+}
+
+.profession h2 {
+	font-family: var(--secondary-font);
+	font-size: 1.2rem;
+	padding: 20px;
+}
+
+.call-to-action button {
+	background: rgb(142, 45, 226);
+	background: linear-gradient(
+		45deg,
+		rgba(142, 45, 226, 1) 0%,
+		rgba(74, 0, 224, 1) 100%
+	);
+	border: none;
+	padding: 10px 20px;
+	color: white;
+	border-radius: 5px;
+	margin: 10px;
+	font-family: var(--secondary-font);
+	font-size: 1.05rem;
+}
+
+.call-to-action button:last-child {
+	color: #5507e0;
+	background: none;
+	border: 1px solid #6110e1;
+}
+/* General Settings */
+#Skills h1,
+#About-Me h1,
+#Projects h1 {
+	padding-top: 50px;
+	font-family: var(--primary-font);
+	font-size: 3.125rem;
+	color: var(--primary-color);
+	text-align: center;
+}
+
+#Skills,
+#About-Me {
+	height: 100vh;
+}
+/* About Me */
+#About-Me {
+	background-color: #e2f3f5;
+}
+
+.description {
+	height: 80vh;
+	width: 80%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.description img {
+	width: 600px;
+}
+
+.description p {
+	font-size: 1rem;
+	color: white;
+	font-family: var(--secondary-font);
+	line-height: 3;
+	background: linear-gradient(
+		45deg,
+		rgba(142, 45, 226, 1) 0%,
+		rgba(74, 0, 224, 1) 100%
+	);
+	padding: 15px;
+	border-radius: 5px;
+	max-width: 70ch;
+}
+/* Skills */
+.skills-container {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 80%;
+	margin: 0 auto;
+}
+
+.skill {
+	border: 1px solid var(--primary-color);
+	border-radius: 5px;
+	flex-basis: 20%;
+	height: 400px;
+	padding: 20px;
+}
+.skill img {
+	width: 120px;
+	display: block;
+	margin: 0 auto;
+}
+
+.skill h3 {
+	font-size: 0.9rem;
+	font-family: var(--secondary-font);
+	font-weight: bold;
+	margin: 20px 0 20px 0;
+	text-align: center;
+}
+.web-grid {
+	margin-top: 30px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	gap: 25px 10px;
+	grid-template-areas:
+		"html html  javascript javascript"
+		". css api ."
+		"vue vue  laravel laravel";
+}
+
+.javascript {
+	grid-area: javascript;
+}
+
+.html {
+	grid-area: html;
+}
+
+.css {
+	grid-area: css;
+}
+
+.vue {
+	grid-area: vue;
+}
+
+.api {
+	grid-area: api;
+}
+
+.laravel {
+	grid-area: laravel;
+}
+
+.grid {
+	margin-top: 40px;
+	display: flex;
+	flex-direction: column;
+}
+.grid li {
+	margin: 5px auto;
+}
+
+.skill li {
+	display: table;
+	background: rgb(142, 45, 226);
+	background: linear-gradient(
+		45deg,
+		rgba(142, 45, 226, 1) 0%,
+		rgba(74, 0, 224, 1) 100%
+	);
+	padding: 5px 20px;
+	border-radius: 20px;
+	color: white;
+	font-family: var(--secondary-font);
+	font-weight: bold;
+	font-size: 0.9rem;
+	list-style: none;
+}
+/* Projects */
+.project-container {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.project {
+	display: flex;
+	margin: 50px;
+}
+.project-description {
+	padding: 30px;
+	background-color: #e2f3f5;
+	flex: 1;
+}
+.project h4 {
+	font-family: var(--secondary-font);
+	font-size: 1.2rem;
+	font-weight: bold;
+	color: var(--primary-color);
+	margin: 15px 0 15px 0;
+}
+.project p {
+	line-height: 3;
+	font-family: var(--secondary-font);
+	font-size: 1rem;
+}
+
+.project img {
+	width: 773px;
+	height: 382px;
+}
+/* Footer */
+#Footer {
+	background: var(--gradient);
+	padding: 50px 50px 0 50px;
+	color: white;
+	font-family: var(--secondary-font);
+}
+#Footer p {
+	font-size: 0.9rem;
+	text-align: center;
+	margin: 10px auto;
+}
+.footer-container {
+	display: flex;
+}
+.social-link {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	flex: 1;
+}
+.social-link img {
+	width: 40px;
+}
+.social-link a {
+	margin: 10px;
+}
+.social-link p {
+	width: 60ch;
+	line-height: 2;
+}
+.feedback {
+	/* background-color: blanchedalmond; */
+	flex: 1;
+}
+form {
+	display: flex;
+	flex-direction: column;
+}
+.form-row {
+	margin: 5px;
+	display: flex;
+}
+
+label {
+	color: white;
+	font-family: var(--secondary-font);
+	font-size: 0.9rem;
+	align-self: center;
+	flex: 0.15;
+}
+input,
+textarea {
+	border: none;
+	border-radius: 5px;
+	padding: 10px;
+	font-family: var(--secondary-font);
+	flex: 0.75;
+}
+input {
+	height: 50px;
+}
+textarea {
+	resize: none;
+	height: 200px;
+	font-size: 0.9rem;
+}
+button[type="submit"] {
+	background-color: white;
+	border: none;
+	width: 150px;
+	margin-top: 5px;
+	border-radius: 5px;
+	padding: 10px 0;
+	font-family: var(--secondary-font);
+	color: var(--primary-color);
+	font-size: 0.9rem;
+	align-self: center;
+}
+
+@media screen and (max-width: 480px) {
+	svg {
+		display: none;
+	}
+	#About-Me h1,
+	#Skills h1,
+	#Projects h1 {
+		font-size: 2rem;
+	}
+	.hero-section {
+		margin-top: 100px;
+		flex-direction: column;
+	}
+	.hero-section h1 {
+		font-size: 3rem;
+	}
+	.hero-section h3 {
+		font-size: 0.8rem;
+	}
+	.hero-section img {
+		width: 500px;
+	}
+	.profession {
+		margin: 20px;
+		flex-direction: column;
+	}
+	.profession h2 {
+		text-align: center;
+		padding: 5px;
+		font-size: 0.9rem;
+	}
+	.call-to-action {
+		justify-content: center;
+		text-align: center;
+	}
+	.call-to-action button {
+		background: rgb(142, 45, 226);
+		background: linear-gradient(
+			45deg,
+			rgba(142, 45, 226, 1) 0%,
+			rgba(74, 0, 224, 1) 100%
+		);
+		border: none;
+		padding: 5px 10px;
+		color: white;
+		border-radius: 5px;
+		margin: 10px;
+		font-family: var(--secondary-font);
+		font-size: 0.9rem;
+	}
+	/* About-Me */
+	.description {
+		flex-direction: column;
+		width: 100%;
+	}
+	.description img {
+		width: 200px;
+	}
+	.description p {
+		width: 90%;
+		margin: 0 auto;
+		border-radius: 5px;
+		line-height: 2.5;
+		font-size: 0.9rem;
+	}
+	/* Skills */
+	#Skills {
+		height: 100%;
+	}
+	.skills-container {
+		width: 100%;
+		flex-direction: column;
+	}
+	.skill {
+		width: 300px;
+		height: auto;
+		margin: 10px 0;
+	}
+	.skill li {
+		font-size: 0.8rem;
+	}
+	/* Projects */
+	.project-container {
+		width: 100%;
+	}
+	.project {
+		flex-direction: column;
+	}
+	.project-description:nth-child(1) {
+		order: 1;
+	}
+	.project img {
+		width: 100%;
+		height: auto;
+	}
+	.project h4 {
+		font-size: 1.1rem;
+	}
+	.project p {
+		line-height: 2;
+		font-size: 0.9rem;
+	}
+	/* Contact */
+	#Footer {
+		padding: 25px 25px 0 25px;
+	}
+	.footer-container {
+		flex-direction: column;
+	}
+	.social-link a {
+		margin: 10px;
+	}
+	.social-link img {
+		margin: 15px auto;
+	}
+	#Footer p {
+		font-size: 0.8rem;
+	}
+	label {
+		display: none;
+	}
+	input,
+	textarea {
+		flex: 1;
+	}
+	input {
+		height: 40px;
+	}
+	textarea {
+		height: 150px;
+	}
+	button[type="submit"] {
+		background-color: white;
+		border: none;
+		width: 100px;
+		margin-top: 5px;
+		border-radius: 5px;
+		padding: 10px 0;
+		font-family: var(--secondary-font);
+		color: var(--primary-color);
+		font-size: 0.8rem;
+		align-self: center;
+	}
+	#Footer p {
+		font-size: 0.8rem;
+	}
+	.social-link img {
+		width: 30px;
+		margin-bottom: 0;
+	}
+	.social-link p {
+		width: 40ch;
+		margin: 100px auto;
+	}
 }
