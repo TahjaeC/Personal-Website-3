@@ -7,6 +7,11 @@
 		rgba(142, 45, 226, 1) 0%,
 		rgba(74, 0, 224, 1) 100%
 	);
+	--reverse-gradient: linear-gradient(
+		270deg,
+		rgba(142, 45, 226, 1) 0%,
+		rgba(74, 0, 224, 1) 100%
+	);
 }
 @import url("https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Comfortaa:wght@300;400;500&display=swap");
 * {
@@ -14,7 +19,11 @@
 	padding: 0;
 	box-sizing: border-box;
 	scroll-behavior: smooth;
+	font-family: var(--secondary-font);
+}
+body {
 	overflow-x: hidden;
+	text-rendering: optimizeLegibility;
 }
 header {
 	height: 100vh;
@@ -27,11 +36,12 @@ svg {
 	right: -9%;
 	top: -17%;
 	z-index: -1;
-	overflow: hidden;
 }
 /* Navigation Bar */
 nav {
 	display: flex;
+	position: fixed;
+	width: 100%;
 	align-items: center;
 	justify-content: space-between;
 	height: 80px;
@@ -45,20 +55,30 @@ nav img {
 
 ul {
 	display: flex;
-	list-style: none;
+	list-style-type: none;
 }
 nav li {
-	margin: 30px;
+	margin: 20px;
 }
-nav a {
+nav ul li a {
 	text-decoration: none;
-	font-family: var(--secondary-font);
-	font-size: 0.9rem;
+	font-size: 0.8rem;
 	color: white;
+	padding: 8px 15px;
+	border-radius: 5px;
+	transition: 0.2s ease;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+	background-color: white;
+	color: var(--primary-color);
+	cursor: pointer;
 }
 
 /* Hero Section */
 .hero-section {
+	margin-top: 100px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -69,7 +89,6 @@ nav a {
 }
 
 .hero-section h3 {
-	font-family: var(--secondary-font);
 	font-size: 20px;
 	color: var(--primary-color);
 }
@@ -84,31 +103,31 @@ nav a {
 }
 
 .profession h2 {
-	font-family: var(--secondary-font);
 	font-size: 1.2rem;
+	font-weight: 400;
 	padding: 20px;
 }
 
 .call-to-action button {
-	background: rgb(142, 45, 226);
-	background: linear-gradient(
-		45deg,
-		rgba(142, 45, 226, 1) 0%,
-		rgba(74, 0, 224, 1) 100%
-	);
+	background: var(--gradient);
 	border: none;
 	padding: 10px 20px;
 	color: white;
 	border-radius: 5px;
 	margin: 10px;
-	font-family: var(--secondary-font);
 	font-size: 1.05rem;
+	cursor: pointer;
 }
 
 .call-to-action button:last-child {
 	color: #5507e0;
 	background: none;
 	border: 1px solid #6110e1;
+	transition: 0.3s ease-in;
+}
+.call-to-action a button:last-child:hover {
+	color: white;
+	background: var(--gradient);
 }
 /* General Settings */
 #Skills h1,
@@ -145,7 +164,6 @@ nav a {
 .description p {
 	font-size: 1rem;
 	color: white;
-	font-family: var(--secondary-font);
 	line-height: 3;
 	background: linear-gradient(
 		45deg,
@@ -169,58 +187,30 @@ nav a {
 	border: 1px solid var(--primary-color);
 	border-radius: 5px;
 	flex-basis: 20%;
+	margin-top: 150px;
 	height: 400px;
 	padding: 20px;
 }
 .skill img {
-	width: 120px;
+	width: 100px;
 	display: block;
 	margin: 0 auto;
 }
 
 .skill h3 {
 	font-size: 0.9rem;
-	font-family: var(--secondary-font);
 	font-weight: bold;
 	margin: 20px 0 20px 0;
 	text-align: center;
 }
 .web-grid {
-	margin-top: 30px;
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
-	grid-template-rows: 1fr 1fr 1fr;
-	gap: 25px 10px;
-	grid-template-areas:
-		"html html  javascript javascript"
-		". css api ."
-		"vue vue  laravel laravel";
+	margin-top: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 10px;
 }
-
-.javascript {
-	grid-area: javascript;
-}
-
-.html {
-	grid-area: html;
-}
-
-.css {
-	grid-area: css;
-}
-
-.vue {
-	grid-area: vue;
-}
-
-.api {
-	grid-area: api;
-}
-
-.laravel {
-	grid-area: laravel;
-}
-
 .grid {
 	margin-top: 40px;
 	display: flex;
@@ -232,16 +222,10 @@ nav a {
 
 .skill li {
 	display: table;
-	background: rgb(142, 45, 226);
-	background: linear-gradient(
-		45deg,
-		rgba(142, 45, 226, 1) 0%,
-		rgba(74, 0, 224, 1) 100%
-	);
+	background: var(--gradient);
 	padding: 5px 20px;
 	border-radius: 20px;
 	color: white;
-	font-family: var(--secondary-font);
 	font-weight: bold;
 	font-size: 0.9rem;
 	list-style: none;
@@ -262,7 +246,6 @@ nav a {
 	flex: 1;
 }
 .project h4 {
-	font-family: var(--secondary-font);
 	font-size: 1.2rem;
 	font-weight: bold;
 	color: var(--primary-color);
@@ -270,7 +253,6 @@ nav a {
 }
 .project p {
 	line-height: 3;
-	font-family: var(--secondary-font);
 	font-size: 1rem;
 }
 
@@ -280,15 +262,14 @@ nav a {
 }
 /* Footer */
 #Footer {
-	background: var(--gradient);
+	background: var(--reverse-gradient);
 	padding: 50px 50px 0 50px;
 	color: white;
-	font-family: var(--secondary-font);
 }
 #Footer p {
 	font-size: 0.9rem;
 	text-align: center;
-	margin: 10px auto;
+	/* margin: 10px auto; */
 }
 .footer-container {
 	display: flex;
@@ -325,19 +306,32 @@ form {
 
 label {
 	color: white;
-	font-family: var(--secondary-font);
 	font-size: 0.9rem;
 	align-self: center;
-	flex: 0.15;
+	flex: 0.12;
 }
 input,
 textarea {
 	border: none;
 	border-radius: 5px;
 	padding: 10px;
-	font-family: var(--secondary-font);
 	flex: 0.75;
 }
+/* ::-webkit-input-placeholder {
+	font-family: var(--secondary-font);
+}
+::-moz-placeholder {
+	font-family: var(--secondary-font);
+}
+:-ms-input-placeholder {
+	font-family: var(--secondary-font);
+}
+::-ms-input-placeholder {
+	font-family: var(--secondary-font);
+}
+::placeholder {
+	font-family: var(--secondary-font);
+} */
 input {
 	height: 50px;
 }
@@ -353,13 +347,23 @@ button[type="submit"] {
 	margin-top: 5px;
 	border-radius: 5px;
 	padding: 10px 0;
-	font-family: var(--secondary-font);
 	color: var(--primary-color);
 	font-size: 0.9rem;
 	align-self: center;
 }
 
 @media screen and (max-width: 480px) {
+	nav {
+		padding: 0 10%;
+		background-color: var(--primary-color);
+		height: 60px;
+	}
+	nav li {
+		margin: 5px;
+	}
+	nav img {
+		width: 50px;
+	}
 	svg {
 		display: none;
 	}
@@ -379,7 +383,8 @@ button[type="submit"] {
 		font-size: 0.8rem;
 	}
 	.hero-section img {
-		width: 500px;
+		margin-top: 25px;
+		width: 600px;
 	}
 	.profession {
 		margin: 20px;
@@ -406,7 +411,6 @@ button[type="submit"] {
 		color: white;
 		border-radius: 5px;
 		margin: 10px;
-		font-family: var(--secondary-font);
 		font-size: 0.9rem;
 	}
 	/* About-Me */
@@ -415,7 +419,7 @@ button[type="submit"] {
 		width: 100%;
 	}
 	.description img {
-		width: 200px;
+		width: 400px;
 	}
 	.description p {
 		width: 90%;
@@ -427,6 +431,9 @@ button[type="submit"] {
 	/* Skills */
 	#Skills {
 		height: 100%;
+	}
+	#Skills h1 {
+		margin-bottom: 50px;
 	}
 	.skills-container {
 		width: 100%;
@@ -497,7 +504,6 @@ button[type="submit"] {
 		margin-top: 5px;
 		border-radius: 5px;
 		padding: 10px 0;
-		font-family: var(--secondary-font);
 		color: var(--primary-color);
 		font-size: 0.8rem;
 		align-self: center;
@@ -510,7 +516,7 @@ button[type="submit"] {
 		margin-bottom: 0;
 	}
 	.social-link p {
-		width: 40ch;
-		margin: 100px auto;
+		width: 50ch;
+		margin-top: 10px;
 	}
 }

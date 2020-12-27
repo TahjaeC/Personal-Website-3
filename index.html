@@ -5,7 +5,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 		<link rel="stylesheet" href="style.css" />
-		<link rel="stylesheet" href="medium-responsive.css" />
+		<!-- <link rel="stylesheet" href="medium-responsive.css" /> -->
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 		<title>Tahjae Campbell</title>
 	</head>
 	<body>
@@ -29,7 +30,7 @@
 					</div>
 					<div class="call-to-action">
 						<button>Hire Me</button>
-						<button>Offer Feedback</button>
+						<a href="#Footer"><button>Offer Feedback</button></a>
 					</div>
 				</div>
 				<img src="./img/web-development.svg" alt="Graphic" />
@@ -67,8 +68,8 @@
 		<section id="About-Me">
 			<h1>About Me</h1>
 			<div class="description">
-				<img src="./img/briefcase.svg" alt="briefcase" />
-				<p>
+				<img src="./img/briefcase.svg" alt="briefcase" data-aos="fade-right" />
+				<p data-aos="fade-left">
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique
 					commodi aspernatur cupiditate quos optio, suscipit animi odio sit!
 					Vero maiores beatae perferendis aspernatur at molestiae eius, dolorem
@@ -81,28 +82,27 @@
 		<section id="Skills">
 			<h1>Skills</h1>
 			<div class="skills-container">
-				<div class="skill">
+				<div class="skill" data-aos="fade-right">
 					<img src="./img/icons8-code-80.png" alt="Web Development" />
 					<h3>Web Development</h3>
 					<div class="web-grid">
 						<div class="javascript">
 							<li>JavaScript</li>
 						</div>
-
 						<div class="css">
 							<li>CSS</li>
 						</div>
 						<div class="api">
 							<li>API</li>
 						</div>
-						<div class="html"><li>HTML 5</li></div>
+						<div class="html"><li>HTML</li></div>
 						<div class="vue">
 							<li>Vue.js</li>
 						</div>
 						<div class="laravel"><li>Laravel</li></div>
 					</div>
 				</div>
-				<div class="skill">
+				<div class="skill" data-aos="fade-right">
 					<img src="./img/icons8-paint-128.png" alt="Web Design" />
 					<h3>Web Design</h3>
 					<div class="grid">
@@ -110,7 +110,7 @@
 						<li>Adobe Illustrator</li>
 					</div>
 				</div>
-				<div class="skill">
+				<div class="skill" data-aos="fade-left">
 					<img
 						src="./img/icons8-laptop-coding-100.png"
 						alt="Software Programming"
@@ -121,7 +121,7 @@
 						<li>C++ Programming</li>
 					</div>
 				</div>
-				<div class="skill">
+				<div class="skill" data-aos="fade-left">
 					<img src="./img/icons8-gears-100.png" alt="Other Tools" />
 					<h3>Other Tools</h3>
 					<div class="grid">
@@ -137,9 +137,9 @@
 			<div class="project-container">
 				<div class="project">
 					<div>
-						<img src="./img/Cups.PNG" alt="C.U.P.S." />
+						<img src="./img/Cups.PNG" alt="C.U.P.S." data-aos="fade-right" />
 					</div>
-					<div class="project-description">
+					<div class="project-description" data-aos="fade-left">
 						<h4>Coffee Uplifing People</h4>
 						<p>
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita,
@@ -150,7 +150,7 @@
 					</div>
 				</div>
 				<div class="project">
-					<div class="project-description">
+					<div class="project-description" data-aos="fade-right">
 						<h4>Calculator</h4>
 						<p>
 							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui
@@ -159,14 +159,18 @@
 						</p>
 					</div>
 					<div>
-						<img src="./img/Calculator.PNG" alt="Calculator" />
+						<img
+							src="./img/Calculator.PNG"
+							alt="Calculator"
+							data-aos="fade-left"
+						/>
 					</div>
 				</div>
 				<div class="project">
 					<div>
-						<img src="/img/briefcase.svg" alt="" />
+						<img src="/img/briefcase.svg" alt="" data-aos="fade-right" />
 					</div>
-					<div class="project-description">
+					<div class="project-description" data-aos="fade-left">
 						<h4>Portfolio</h4>
 						<p>
 							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum
@@ -220,5 +224,12 @@
 			</div>
 			<p>Copyright 2020</p>
 		</section>
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<script>
+			AOS.init({
+				offset: 300,
+				duration: 500
+			});
+		</script>
 	</body>
 </html>
