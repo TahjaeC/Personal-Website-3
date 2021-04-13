@@ -361,8 +361,8 @@ strong {
 	}
 
 	.description p {
-		font-size: 0.9rem;
-		line-height: 2.5;
+		font-size: 0.85rem;
+		line-height: 2;
 	}
 }
 
@@ -442,7 +442,14 @@ strong {
 	}
 	.skill {
 		width: 300px;
-		height: 380px;
+		height: 300px;
+		padding: 10px;
+	}
+	.skill img {
+		width: 70px;
+	}
+	.skills li {
+		font-size: 0.8rem;
 	}
 }
 
@@ -496,6 +503,11 @@ strong {
 }
 .github a:hover {
 	background: pink;
+}
+@media only screen and (max-width: 600px) {
+	.project p {
+		font-size: 0.85rem;
+	}
 }
 @media only screen and (max-width: 1500px) {
 	.project {
@@ -636,9 +648,10 @@ button[type='submit']:active {
 		margin: 20px;
 	}
 	.social-link p {
-		width: 400px;
-		line-height: 2.5;
+		max-width: 400px;
+		line-height: 2;
 		background-color: pink;
+		margin-bottom: 20px;
 	}
 	button[type='submit'] {
 		width: 90px;
