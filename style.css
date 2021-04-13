@@ -140,13 +140,11 @@ ion-icon {
 @media only screen and (max-width: 600px) {
 	nav {
 		height: 60px;
+		padding: 0;
+		background: var(--primary-color);
 	}
 	ion-icon {
 		display: block;
-	}
-	nav {
-		padding: 0;
-		background: var(--primary-color);
 	}
 	ul {
 		display: none;
@@ -284,7 +282,7 @@ header .landing-info {
 	}
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
 	.profession h2 {
 		font-size: 1rem;
 	}
@@ -354,7 +352,6 @@ strong {
 	}
 	.description {
 		width: 100%;
-		/* flex-direction: column; */
 	}
 	.description img {
 		width: 300px;
@@ -432,7 +429,7 @@ strong {
 	font-size: 0.9rem;
 	list-style: none;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
 	.skills-container {
 		width: 100%;
 	}
@@ -630,7 +627,7 @@ button[type='submit']:active {
 	}
 }
 
-@media only screen and (max-width: 960px) {
+@media only screen and (max-width: 600px) {
 	#Footer {
 		/* background: var(--gradient); */
 		color: white;
