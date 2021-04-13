@@ -648,7 +648,7 @@ button[type='submit']:active {
 		margin: 20px;
 	}
 	.social-link p {
-		max-width: 400px;
+		/* min-width: 200px; */
 		line-height: 2;
 		background-color: pink;
 		margin-bottom: 20px;
