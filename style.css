@@ -265,7 +265,7 @@ header .landing-info {
 @media only screen and (max-width: 900px) {
 	.landing-info {
 		flex-direction: column;
-		padding-top: 150px;
+		padding: 60px;
 	}
 	.hero-section {
 		justify-content: center;
@@ -647,7 +647,7 @@ button[type='submit']:active {
 	.social-link p {
 		/* min-width: 200px; */
 		line-height: 2;
-		background-color: pink;
+		background-color: brown;
 		margin-bottom: 20px;
 	}
 	button[type='submit'] {
