@@ -346,7 +346,7 @@ strong {
 	max-width: 70ch;
 	text-align: justify;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
 	#Skills h1,
 	#About-Me h1,
 	#Projects h1 {
