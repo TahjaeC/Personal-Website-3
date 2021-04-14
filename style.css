@@ -14,11 +14,11 @@
 	box-sizing: border-box;
 	font-family: 'Work Sans', cursive;
 	font-weight: 400;
+	overflow-x: hidden;
 }
 body {
 	text-rendering: optimizeLegibility;
 	scroll-behavior: smooth;
-	overflow-x: hidden;
 }
 header {
 	height: 100vh;
@@ -356,7 +356,6 @@ strong {
 	}
 	.description {
 		width: 100%;
-		background-color: orange;
 		padding: 20px;
 	}
 	.description img {
