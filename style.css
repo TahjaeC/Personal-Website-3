@@ -14,10 +14,10 @@
 	box-sizing: border-box;
 	font-family: 'Work Sans', cursive;
 	font-weight: 400;
+	overflow-x: hidden;
 }
 body {
 	text-rendering: optimizeLegibility;
-	overflow-x: hidden;
 	scroll-behavior: smooth;
 }
 header {
