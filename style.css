@@ -14,11 +14,11 @@
 	box-sizing: border-box;
 	font-family: 'Work Sans', cursive;
 	font-weight: 400;
-	overflow-x: hidden;
 }
 body {
 	text-rendering: optimizeLegibility;
 	scroll-behavior: smooth;
+	overflow-x: hidden;
 }
 header {
 	height: 100vh;
@@ -265,7 +265,6 @@ ion-icon {
 @media only screen and (max-width: 900px) {
 	.landing-info {
 		padding: 20px;
-		/* background-color: pink; */
 	}
 	.landing-cover {
 		padding-top: 100px;
@@ -357,6 +356,8 @@ strong {
 	}
 	.description {
 		width: 100%;
+		background-color: orange;
+		padding: 20px;
 	}
 	.description img {
 		width: 300px;
@@ -365,6 +366,10 @@ strong {
 	.description p {
 		font-size: 0.85rem;
 		line-height: 2;
+	}
+	strong {
+		font-size: 1.1rem;
+		font-weight: 500;
 	}
 }
 
@@ -649,6 +654,9 @@ button[type='submit']:active {
 }
 
 @media only screen and (max-width: 600px) {
+	#Footer {
+		padding: 10px 10px 0 10px;
+	}
 	form {
 		justify-content: center;
 	}
