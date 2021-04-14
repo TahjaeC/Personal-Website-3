@@ -43,15 +43,8 @@ header {
 	top: -5%;
 	bottom: 0;
 }
-/* svg {
-	position: absolute;
-	width: 100%;
-	right: -18%;
-	top: -14%;
-	z-index: -1;
-} */
 
-/* Navigation Bar */
+/********************Navigation Bar*******************/
 nav {
 	display: flex;
 	position: fixed;
@@ -60,7 +53,6 @@ nav {
 	justify-content: center;
 	height: 80px;
 	padding: 0 20%;
-	/* background: purple; */
 	transition: background 0.3s ease-in-out;
 	-webkit-transition: background 0.3s ease-in-out;
 	-moz-transition: background 0.3s ease-in-out;
@@ -108,6 +100,7 @@ nav ul li a:focus {
 }
 
 /*************** Navigation scroll*****/
+
 .nav-on-scroll {
 	background: var(--primary-color);
 	box-shadow: var(--shade);
@@ -183,14 +176,21 @@ ion-icon {
 }
 
 /********************Landing Page********************** */
-header .landing-info {
+.landing-info {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	flex-wrap: wrap;
 	margin: 0 auto;
-	max-width: 90%;
+	max-width: 100%;
+	width: 90%;
 	min-height: 100vh;
+}
+.landing-cover {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	width: 100%;
 }
 .hero-section {
 	display: flex;
@@ -209,12 +209,12 @@ header .landing-info {
 	height: fit-content;
 }
 
-.landing-info h3 {
+.landing-cover h3 {
 	font-size: 20px;
 	color: var(--primary-color);
 }
 
-.landing-info h1 {
+.landing-cover h1 {
 	font-family: 'Berkshire Swash';
 	font-size: 5rem;
 	color: var(--primary-color);
@@ -264,9 +264,14 @@ header .landing-info {
 
 @media only screen and (max-width: 900px) {
 	.landing-info {
-		flex-direction: column;
-		padding: 60px;
+		padding: 20px;
+		/* background-color: pink; */
 	}
+	.landing-cover {
+		padding-top: 100px;
+		flex-direction: column;
+	}
+
 	.hero-section {
 		justify-content: center;
 	}
@@ -531,7 +536,6 @@ strong {
 #Footer p {
 	font-size: 0.9rem;
 	text-align: center;
-	/* margin: 10px auto; */
 }
 .footer-container {
 	display: flex;
@@ -627,11 +631,13 @@ button[type='submit']:active {
 	}
 }
 
-@media only screen and (max-width: 600px) {
-	#Footer {
-		/* background: var(--gradient); */
-		color: white;
+@media only screen and (max-width: 900px) {
+	.footer-container {
+		flex-direction: column;
 	}
+}
+
+@media only screen and (max-width: 600px) {
 	form {
 		justify-content: center;
 	}
@@ -645,7 +651,6 @@ button[type='submit']:active {
 		margin: 20px;
 	}
 	.social-link p {
-		/* min-width: 200px; */
 		line-height: 2;
 		background-color: brown;
 		margin-bottom: 20px;
