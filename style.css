@@ -14,7 +14,6 @@
 	box-sizing: border-box;
 	font-family: 'Work Sans', cursive;
 	font-weight: 400;
-	overflow-x: hidden;
 }
 body {
 	text-rendering: optimizeLegibility;
@@ -23,6 +22,7 @@ body {
 header {
 	height: 100vh;
 	position: relative;
+	overflow-x: hidden;
 }
 
 .background-svg {
@@ -311,6 +311,7 @@ ion-icon {
 #About-Me,
 #Projects {
 	background-color: var(--background);
+	overflow-x: hidden;
 }
 
 #About-Me {
@@ -375,6 +376,7 @@ strong {
 /*************************Skills***************************** */
 #Skills {
 	display: flex;
+	overflow-x: hidden;
 }
 .skills-container {
 	display: flex;
@@ -544,6 +546,7 @@ strong {
 	background: var(--gradient);
 	padding: 50px 50px 0 50px;
 	color: white;
+	overflow-x: hidden;
 }
 #Footer p {
 	font-size: 0.9rem;
