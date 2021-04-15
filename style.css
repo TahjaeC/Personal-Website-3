@@ -63,7 +63,6 @@ nav {
 ul {
 	display: flex;
 	list-style-type: none;
-	transition: 0.3s ease;
 }
 nav li {
 	margin: 30px;
@@ -76,20 +75,16 @@ nav ul li a {
 	border-radius: 5px;
 	transition: 0.2s ease;
 }
-li a:nth-child(3) {
-	padding: 16px 16px;
-}
-
-nav ul li a:nth-child(3):hover {
-	background-color: red;
+li:nth-child(3) {
+	color: white;
 }
 
 span {
-	font-size: 1.3rem;
+	font-size: 1.5rem;
 	letter-spacing: 5px;
 	font-style: bold;
 	font-weight: 800;
-	font-family: 'Berkshire Swash', cursive;
+	/* font-family: 'Berkshire Swash', cursive; */
 }
 
 nav ul li a:hover,
@@ -112,7 +107,7 @@ ion-icon {
 	cursor: pointer;
 	display: none;
 	position: absolute;
-	top: 15px;
+	top: 7px;
 	right: 20px;
 	z-index: 5;
 }
@@ -132,7 +127,7 @@ ion-icon {
 
 @media only screen and (max-width: 600px) {
 	nav {
-		height: 60px;
+		height: 45px;
 		padding: 0;
 		background: var(--primary-color);
 	}
@@ -141,13 +136,17 @@ ion-icon {
 	}
 	ul {
 		display: none;
+		transition: transform 0.3s ease;
+		-webkit-transition: transform 0.3s ease;
+		-moz-transition: transform 0.3s ease;
+		-ms-transition: transform 0.3s ease;
+		-o-transition: transform 0.3s ease;
 	}
-
 	ul.active {
 		display: block;
 		position: absolute;
-		right: 0;
-		top: 60px;
+		right: -100%;
+		top: 45px;
 		width: 100%;
 		height: fit-content;
 		background: var(--gradient);
@@ -155,6 +154,11 @@ ion-icon {
 		text-align: center;
 		flex-direction: column;
 		background: var(--primary-color);
+		transform: translateX(-100%);
+		-webkit-transform: translateX(-100%);
+		-moz-transform: translateX(-100%);
+		-ms-transform: translateX(-100%);
+		-o-transform: translateX(-100%);
 	}
 
 	nav li {
@@ -357,7 +361,7 @@ strong {
 	}
 	.description {
 		width: 100%;
-		padding: 20px;
+		padding: 40px;
 	}
 	.description img {
 		width: 300px;
@@ -449,7 +453,7 @@ strong {
 		min-height: 100vh;
 	}
 	.skill {
-		width: 250px;
+		width: 335px;
 		height: 300px;
 		padding: 10px;
 		margin: 10px;
@@ -520,6 +524,7 @@ strong {
 @media only screen and (max-width: 600px) {
 	.project-container {
 		width: 90%;
+		padding: 20px;
 	}
 	.project p {
 		font-size: 0.85rem;
