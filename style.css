@@ -14,10 +14,10 @@
 	box-sizing: border-box;
 	font-family: 'Work Sans', cursive;
 	font-weight: 400;
+	scroll-behavior: smooth;
 }
 body {
 	text-rendering: optimizeLegibility;
-	scroll-behavior: smooth;
 }
 header {
 	height: 100vh;
@@ -239,7 +239,6 @@ ion-icon {
 .call-to-action {
 	margin-top: 20px;
 }
-
 .call-to-action a {
 	text-decoration: none;
 	padding: 10px 20px;
@@ -248,7 +247,11 @@ ion-icon {
 	margin-right: 10px;
 	font-size: 1.05rem;
 	cursor: pointer;
-	transition: 0.3s ease;
+	transition: 0.5s ease;
+	-webkit-transition: 0.5s ease;
+	-moz-transition: 0.5s ease;
+	-ms-transition: 0.5s ease;
+	-o-transition: 0.5s ease;
 }
 .call-to-action a:first-child {
 	background: var(--gradient);
@@ -307,9 +310,24 @@ ion-icon {
 	}
 }
 
+/* ******************General Settings********************* */
 #Skills,
 #About-Me {
 	min-height: 100vh;
+}
+#Projects h1 {
+	display: block;
+	text-align: center;
+	padding-top: 70px;
+	margin: 30px;
+	font-family: 'Berkshire Swash';
+	font-size: 3rem;
+	color: var(--primary-color);
+}
+@media screen and (max-width: 600px) {
+	#Projects h1 {
+		font-size: 2rem;
+	}
 }
 /*******************About Me************************** */
 #About-Me,
@@ -324,7 +342,7 @@ ion-icon {
 
 .description {
 	min-height: 80vh;
-	width: 80%;
+	width: 90%;
 	margin: 0 auto;
 	padding: 50px;
 	display: flex;
@@ -350,7 +368,7 @@ strong {
 	background: var(--gradient);
 	padding: 25px;
 	border-radius: 5px;
-	max-width: 70ch;
+	max-width: 80ch;
 	text-align: start;
 }
 @media only screen and (max-width: 600px) {
@@ -369,7 +387,7 @@ strong {
 
 	.description p {
 		font-size: 0.85rem;
-		line-height: 2;
+		line-height: 2.5;
 	}
 	strong {
 		font-size: 1.1rem;
@@ -381,6 +399,26 @@ strong {
 #Skills {
 	display: flex;
 	overflow-x: hidden;
+	position: relative;
+}
+.up {
+	position: absolute;
+	top: 3%;
+	left: 5%;
+	z-index: -1;
+}
+.down {
+	position: absolute;
+	bottom: 1%;
+	right: 3%;
+	z-index: -1;
+}
+#Skills p {
+	font-size: 25rem;
+	font-weight: bolder;
+	text-transform: uppercase;
+	color: grey;
+	opacity: 12%;
 }
 .skills-container {
 	display: flex;
@@ -473,7 +511,7 @@ strong {
 	align-items: center;
 	width: 80%;
 	margin: 0 auto;
-	padding: 70px 0;
+	padding: 30px 0;
 	flex-wrap: wrap;
 }
 
@@ -485,6 +523,11 @@ strong {
 	padding: 30px;
 	background: var(--gradient);
 	max-height: 400px;
+	border-radius: 0 5px 5px 0;
+	-webkit-border-radius: 0 5px 5px 0;
+	-moz-border-radius: 0 5px 5px 0;
+	-ms-border-radius: 0 5px 5px 0;
+	-o-border-radius: 0 5px 5px 0;
 	flex: 1;
 }
 .project h4 {
@@ -510,21 +553,18 @@ strong {
 	max-height: 400px;
 	border: none;
 }
-.github a {
+.git {
 	text-decoration: none;
 	font-size: 1rem;
 	color: white;
-	padding: 15px 35px;
+	padding: 10px 30px;
 	border-radius: 5px;
 	background: var(--gradient);
-}
-.github a:hover {
-	background: pink;
 }
 @media only screen and (max-width: 600px) {
 	.project-container {
 		width: 90%;
-		padding: 20px;
+		padding: 15px;
 	}
 	.project p {
 		font-size: 0.85rem;
@@ -535,7 +575,7 @@ strong {
 		flex-direction: column;
 	}
 	.project p {
-		line-height: 2;
+		line-height: 2.5;
 	}
 	.project h4 {
 		font-size: 1rem;
@@ -543,6 +583,13 @@ strong {
 	.project img {
 		width: 100%;
 		height: auto;
+	}
+	.project-description {
+		border-radius: 0 0px 5px 5px;
+		-webkit-border-radius: 0 0px 5px 5px;
+		-moz-border-radius: 0 0px 5px 5px;
+		-ms-border-radius: 0 0px 5px 5px;
+		-o-border-radius: 0 0px 5px 5px;
 	}
 }
 
@@ -563,6 +610,7 @@ strong {
 	width: 80%;
 	margin: 0 auto;
 	gap: 50px;
+	margin-bottom: 10px;
 }
 
 .social-link {
@@ -572,16 +620,26 @@ strong {
 	flex-direction: column;
 	flex-wrap: wrap;
 }
-.social-link img {
-	width: 30px;
-}
 .social-link a {
 	margin: 10px;
 }
 .social-link p {
 	text-align: justify;
 	width: 100%;
-	line-height: 3;
+	line-height: 2.5;
+}
+.fab,
+.fas {
+	font-size: 25px;
+	color: white;
+}
+.fas {
+	font-size: 15px;
+}
+small {
+	display: block;
+	text-align: center;
+	padding-bottom: 10px;
 }
 .feedback,
 .social-link {
@@ -667,6 +725,9 @@ button[type='submit']:active {
 	form {
 		justify-content: center;
 	}
+	.feedback {
+		width: 100%;
+	}
 	.footer-container {
 		justify-content: center;
 		align-items: center;
@@ -677,7 +738,7 @@ button[type='submit']:active {
 		margin: 20px;
 	}
 	.social-link p {
-		line-height: 2;
+		line-height: 2.5;
 		margin-bottom: 20px;
 	}
 	button[type='submit'] {
