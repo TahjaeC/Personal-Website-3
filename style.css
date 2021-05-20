@@ -476,7 +476,7 @@ strong {
 		min-height: 100vh;
 	}
 	.skill {
-		width: 335px;
+		width: 250px;
 		height: 300px;
 		padding: 10px;
 		margin: 10px;
@@ -486,6 +486,9 @@ strong {
 	}
 	.skills li {
 		font-size: 0.8rem;
+	}
+	.up {
+		display: none;
 	}
 }
 
@@ -578,11 +581,11 @@ strong {
 		height: auto;
 	}
 	.project-description {
-		border-radius: 0 0px 5px 5px;
-		-webkit-border-radius: 0 0px 5px 5px;
-		-moz-border-radius: 0 0px 5px 5px;
-		-ms-border-radius: 0 0px 5px 5px;
-		-o-border-radius: 0 0px 5px 5px;
+		border-radius: 0 0 5px 5px;
+		-webkit-border-radius: 0 0 5px 5px;
+		-moz-border-radius: 0 0 5px 5px;
+		-ms-border-radius: 0 0 5px 5px;
+		-o-border-radius: 0 0 5px 5px;
 	}
 }
 
