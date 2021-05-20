@@ -37,3 +37,33 @@ function nameToggle() {
 }
 
 toggleNav.addEventListener('click', nameToggle);
+
+//Email
+
+//Listen for a click to submit
+document.querySelector('.contact-form').addEventListener('submit', submitForm);
+
+function submitForm(e) {
+	e.preventDefault();
+
+	//Get Input Values
+	let email = document.querySelector('.email').value;
+	let message = document.querySelector('.message').value;
+
+	document.querySelector('.contact-form').reset();
+
+	sendEmail(email, message);
+}
+
+//Send Email info
+function sendEmail(email, message) {
+	Email.send({
+		Host: 'smtp.gmail.com',
+		Username: 'tahjaecampbell15@gmail.com',
+		Password: 'buksuglhbovlkyap',
+		To: 'tahjaecampbell15@gmail.com',
+		From: `${email}`,
+		Subject: 'Feedback for Portfolio Website',
+		Body: `Message: ${message}`
+	}).then((message) => alert('Comment sent successfully'));
+}

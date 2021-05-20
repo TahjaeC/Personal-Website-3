@@ -75,18 +75,10 @@ nav ul li a {
 	border-radius: 5px;
 	transition: 0.2s ease;
 }
-li:nth-child(3) {
-	color: white;
-}
 
-span {
-	font-size: 1.5rem;
-	letter-spacing: 5px;
-	font-style: bold;
-	font-weight: 800;
-	/* font-family: 'Berkshire Swash', cursive; */
+nav ul li img {
+	width: 30px;
 }
-
 nav ul li a:hover,
 nav ul li a:focus {
 	background: white;
@@ -163,9 +155,6 @@ ion-icon {
 
 	nav li {
 		width: fit-content;
-	}
-	nav li:nth-child(3) {
-		display: none;
 	}
 	nav ul li a {
 		color: white;
@@ -254,10 +243,11 @@ ion-icon {
 	-o-transition: 0.5s ease;
 }
 .call-to-action a:first-child {
-	background: var(--gradient);
+	background: var(--primary-color);
 	color: white;
 }
 .call-to-action a:first-child:hover {
+	background: rgb(74, 0, 224);
 	color: white;
 }
 .call-to-action a:last-child {
@@ -407,12 +397,7 @@ strong {
 	left: 5%;
 	z-index: -1;
 }
-.down {
-	position: absolute;
-	bottom: 1%;
-	right: 3%;
-	z-index: -1;
-}
+
 #Skills p {
 	font-size: 25rem;
 	font-weight: bolder;
@@ -559,7 +544,15 @@ strong {
 	color: white;
 	padding: 10px 30px;
 	border-radius: 5px;
-	background: var(--gradient);
+	background: var(--primary-color);
+	transition: background 0.2s ease;
+	-webkit-transition: background 0.2s ease;
+	-moz-transition: background 0.2s ease;
+	-ms-transition: background 0.2s ease;
+	-o-transition: background 0.2s ease;
+}
+.git:hover {
+	background: rgb(74, 0, 224);
 }
 @media only screen and (max-width: 600px) {
 	.project-container {
@@ -635,6 +628,10 @@ strong {
 }
 .fas {
 	font-size: 15px;
+}
+
+.fas.fa-paper-plane {
+	color: var(--primary-color);
 }
 small {
 	display: block;
